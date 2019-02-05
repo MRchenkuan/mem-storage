@@ -1,0 +1,31 @@
+{
+  "name": "@xsyx/mem-storage",
+  "version": "0.1.1",
+  "description": "",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "node test/test.js",
+    "pub": "npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MRchenkuan/mem-storage.git"
+  },
+  "author": "chenkuan <393667111@qq.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MRchenkuan/mem-storage/issues"
+  },
+  "homepage": "https://github.com/MRchenkuan/mem-storage#readme",
+  "dependencies": {
+    "@types/lodash.debounce": "^4.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.21",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.1",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  }
+}
