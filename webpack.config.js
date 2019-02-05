@@ -18,5 +18,6 @@ module.exports = {
         modules: [ "node_modules","src","src/csis" ],
         extensions: ['.ts', '.js',  '.json']
     },
-    mode: 'development'
+    // mode: 'development'
+    mode: 'production'
 };
