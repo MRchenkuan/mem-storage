@@ -49,10 +49,10 @@ class WxStorage implements IStorage{
         })
     }
     async getLocalStorage() {
-        const storage: any = {};
         return await new Promise((resolve, reject)=>{
+            const storage: any = {};
             wx.getStorageInfo({
-                success: function (res: any) {
+                success: (res: any) => {
                     Promise.all((res.keys || []).filter((entry:string) => {
                         return entry.indexOf(WxStorage.keyPrefix) === 0;
                     }).map(async (key: string) => {
