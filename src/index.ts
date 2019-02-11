@@ -3,17 +3,11 @@ import wxStorage from './csis/wx';
 import h5Storage from './csis/h5';
 import utils from './utils';
 
-const debounce = require('lodash.debounce')
-
 class MemStorage {
     private storage: any;
     private queue:any = {};
     private csi: IStorage;
-
-    private setStorage = debounce(() => {
-        this.csi.set(this.queue);
-        this.queue = [];
-    }, 10)
+    private timer: any;
 
     constructor(csi: IStorage){
         this.csi = csi;
@@ -21,7 +15,11 @@ class MemStorage {
     private enqueueSetUpdate(state: any) {
         const { key, val } = state;
         this.queue[key] = val; // {a:123,b:321}
-        this.setStorage()
+        clearTimeout(this.timer)
+        this.timer = setTimeout(async ()=>{
+            await this.csi.set(this.queue);
+            this.queue = [];
+        }, 100)
     }
     async set(object: object, merge: boolean): Promise<any>;
     async set(key: string, data: any, merge: boolean): Promise<any>;

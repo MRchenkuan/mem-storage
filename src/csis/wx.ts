@@ -12,7 +12,6 @@ class WxStorage implements IStorage{
         if (args.length === 1){
             const obj = args[0];
             await Promise.all(Object.keys(obj).map(key => {
-                console.log('setVal', key, obj[key])
                 this.set(key, obj[key]);
             }))
         } else if (args.length === 2){

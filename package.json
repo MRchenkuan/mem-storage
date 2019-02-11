@@ -1,6 +1,6 @@
 {
   "name": "@xsyx/mem-storage",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {
@@ -18,9 +18,7 @@
     "url": "https://github.com/MRchenkuan/mem-storage/issues"
   },
   "homepage": "https://github.com/MRchenkuan/mem-storage#readme",
-  "dependencies": {
-    "@types/lodash.debounce": "^4.0.4"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^10.12.21",
     "ts-loader": "^5.3.3",
