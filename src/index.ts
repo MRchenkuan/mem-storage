@@ -4,7 +4,7 @@ import h5Storage from './csis/h5';
 import utils from './utils';
 
 class MemStorage {
-    private storage: any;
+    private storage: any={};
     private queue:any = {};
     private csi: IStorage;
     private timer: any;
